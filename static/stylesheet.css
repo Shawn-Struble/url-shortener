@@ -1,0 +1,14 @@
+.footer {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	text-decoration: none;
+}
+.fa-linkedin {
+	color:#007bb6;
+}
+
+

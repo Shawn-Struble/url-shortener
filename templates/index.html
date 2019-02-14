@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!--index style sheet -->
+    <link rel="stylesheet" type="text/css" href="../static/stylesheet.css">
+    <title>Hello World</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand">
+        @Shawn Struble
+      </span>
+    </nav>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4"> URL Shortener </h1>
+        <p class="lead"> A simple web portal for creating reroutable, shorter urls. </p>
+        <hr class="my-4">
+        <p>It's built with Python, Flask, SQLite, and Bootstrap. </p>
+        <form action = "http://localhost:5000/" method = "POST" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="enter link to shorten" name="url">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">shorten url</button>
+        </form>
+      </div>
+    </div>
+    <div class = "container">
+      {% if url %}
+        <p>Shortened link: localhost:5000/{{url}} </p>
+      {% endif %}
+    </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <a class = "social-redirects" style="text-decoration: none;" href="https://www.linkedin.com/in/shawn-struble/">
+          <button type="button" class="btn btn-default btn-lg">
+               <i class="fab fa-linkedin fa-2x"></i>
+          </button>
+        </a>
+        <a class = "social-redirects" style="text-decoration: none;" href="https://github.com/Shawn-Struble">
+          <button type="button" class="btn btn-default btn-lg">
+               <i class="fab fa-github-square fa-2x"></i>
+          </button>
+        </a>
+        <a class = "social-redirects" href="mailto:shawnrstruble@gmail.com" target="_top">
+          <button type="button" class="btn btn-default btn-lg">
+               <i class="fas fa-envelope fa-2x"></i>
+          </button>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
